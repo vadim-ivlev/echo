@@ -8,7 +8,7 @@ import (
 
 // TextHandler все о запросе
 func TextHandler(w http.ResponseWriter, r *http.Request) {
-	dat, err := ioutil.ReadFile("api/text.txt")
+	dat, err := ioutil.ReadFile("api/txt.txt")
 	if err != nil {
 		fmt.Fprint(w, err)
 		return
