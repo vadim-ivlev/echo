@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-// TextHandler все о запросе
+// TextHandler some info about files
 func TextHandler(w http.ResponseWriter, r *http.Request) {
 	dir, _ := os.Getwd()
 	fmt.Fprintln(w, "Getwd():", dir)
