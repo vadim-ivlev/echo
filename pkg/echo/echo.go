@@ -11,14 +11,14 @@ import (
 )
 
 func Http(r *http.Request) string {
-	s := "HTTP >>>\n"
+	s := "HTTP >>>>\n"
 	s += "\nRequest: ------------------------------------------------\n"
 	s += Request(r)
 	s += "\nHeaders: ------------------------------------------------\n"
 	s += Headers(r)
 	s += "\nBody: ---------------------------------------------------\n"
 	s += Body(r)
-	s += "HTTP <<<\n"
+	s += "HTTP <<<<\n"
 	return s
 }
 
