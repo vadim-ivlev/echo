@@ -38,6 +38,8 @@ func Headers(r *http.Request) string {
 func Body(r *http.Request) string {
 	bodyBytes, _ := ioutil.ReadAll(r.Body)
 	s := string(bodyBytes)
+	// https://stackoverflow.com/questions/43021058/golang-read-request-body
+	// defer req.Body.Close() //dont need to close ??????
 	// put it back
 	r.Body = ioutil.NopCloser(bytes.NewReader(bodyBytes))
 	return s + "\n"
